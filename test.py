@@ -6,7 +6,7 @@ import re
 
 
 def download(url, files):
-    subprocess.call('wget -m -np -nd -P ' + files + ' ' + url, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    subprocess.call('wget -m -np -nd -e robots=off -P ' + files + ' ' + url, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     pass
 
 
