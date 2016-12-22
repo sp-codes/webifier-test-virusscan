@@ -51,8 +51,8 @@ def print_result(prefix, result):
         files.append("{\"name\": \"" + file + "\", \"malicious\": " + ("true" if result[file] else "false") + "}")
     scanned_files = len(result)
     malicious_files = sum(result.values())
-    print prefix + ": {\"malicious\": " + (
-        "true" if malicious_files > 0 else "false") + ", \"info\": {\"scanned_files\": " + str(
+    print prefix + ": {\"result\": " + (
+        "\"MALICIOUS\"" if malicious_files > 0 else "\"CLEAN\"") + ", \"info\": {\"scanned_files\": " + str(
         scanned_files) + ", \"malicious_files\": " + str(
         malicious_files) + ", \"files\": [" + ", ".join(files) + "]}}"
 
