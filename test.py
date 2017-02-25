@@ -1,4 +1,5 @@
 #!/usr/bin/python
+
 import json
 import subprocess
 import sys
@@ -15,7 +16,10 @@ cav = ""
 
 
 def download(url, files):
-    subprocess.call('sh /tmp/download.sh ' + url + ' ' + files, shell=True)
+    proc = subprocess.Popen('httrack --get-files --keep-links=K --do-not-log --sockets=8 --robots=0 --retries=2 '
+                            '--depth=9999 --max-time=180 ' + url + ' -O ' + files, shell=True,
+                            stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    print proc.stdout.read()
     pass
 
 
