@@ -1,2 +1,2 @@
-# webifier-test-virusscan
-Dockersetup for the virus scan test for webifier
+# webifier-test-malwarescan
+Dockersetup for the malware scan test for webifier

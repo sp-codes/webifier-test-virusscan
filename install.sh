@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker build -t webifier-test-virusscan .
+docker build -t webifier-malwarescan .
